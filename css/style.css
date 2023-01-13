@@ -7,37 +7,90 @@
 
 html {
     font-size: 62.5%;
+    margin: 0;
+    padding: 0;
 }
 body {
     box-sizing: border-box;
     font-family: 'Athiti', sans-serif;
+    font-size: 1.8rem;
+    margin: 0;
+    padding: 0;
+    
 }
 /*header*/
+header {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom, rgba(208,197,186,1) 0%,rgba(235,227,219,0.25) 25%,rgba(255,255,255,0) 100%);
+}
+
 nav {
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding-top: 1em;
 }
 nav .logo, nav ul {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
+.logo p {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
 nav ul {
     list-style: none;
     padding: 0;
-    line-height: 4;
+    line-height: 2.5;
+    width: 100%;
+    text-align: center;
+}
+nav ul li {
+    width: 100%;
+    border-top: 1px solid #4c4343;
+}
+nav ul:last-child {
+    border-bottom: 1px solid #4c4343;
+}
+nav ul li:active {
+    background-color: #4c4343;
+    color: #ebe3db;
 }
 nav ul li a {
     text-decoration: none;
-    color: #555;
+    color: #4c4343;
 }
 nav .logo img {
     width: 20%;
 }
 /*main*/
 section h1, h2{
+    
+    font-family: 'Merienda', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+section h1 {
+    font-size: 3rem;
+}
+.slider {
+    width: 100%;
     text-align: center;
+}
+.slider img {
+    width: 90%;
+}
+.welcome {
+    display: flex;
+    flex-direction: column-reverse;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
 }
 .location img {
     width: 100%;
@@ -46,29 +99,158 @@ section h1, h2{
     width: 90%;
     margin-left: auto;
     margin-right: auto;
+    background-color: #ebe3db;
+    padding-bottom: 1em;
+    margin-bottom: 2rem;
+}
+.card h2 {
+    font-size: 2.5rem;
+}
+.card ul li {
+    border-bottom: 1px dashed #4c4343;
+    padding-left: 1em;
+}
+.fa-star {
+    color: #950000;
+    font-size: 0.8rem;
 }
 .card ul {
-    padding: 1em;
+    margin-bottom: 0.6rem;
+    list-style: none;
+    padding: 0;
 }
 .card img {
     width: 100%;
 }
-.card a {
-    background-color: #555;
+.card .btn {
+    background-color: #4c4343;
+    text-align: center;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2rem;
+}
+.card .btn:hover {
+    background-color: #950000;
+}
+.card .btn a {
     color: #fff;
     text-decoration: none;
-    padding: 1em;
 }
 /*footer*/
 footer {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 2;
+    background-image: url(../images/footer-bg.jpg);
+    background-size: cover;
+    text-align: center;
+    color: #fff;
+    padding-bottom: 1em;
+}
+.droite, .centre, .gauche {
+    width: 90%;
+}
+footer h4 {
+    border-bottom: 1px dashed #fff;
+    width: 100%;
+}
+.picto {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
 }
 .copyright {
     text-align: center;
     background-color: #555;
     color: #fff;
     padding: 1em;
+}
+
+/******************************************************************************
+TABLETTE
+******************************************************************************/
+@media screen and (min-width: 420px) {
+    nav ul {
+        flex-direction: row;
+        border: none;
+        background-color: #ebe3db;
+    }
+    nav ul li {
+        border: none;
+    }
+    nav ul li:active a{
+        color: #ebe3db;
+    }
+    nav ul:last-child {
+        border: none;
+    }
+    footer {
+        flex-direction: row;
+        align-items: start;
+        justify-content: center;
+        gap: 3rem;
+    }
+    footer h4 {
+        width: 100%;
+    }
+    .gauche {
+        margin-left: 2rem;
+    }
+    .droite {
+        margin-right: 2rem;
+    }
+}
+
+/******************************************************************************
+DESKTOP
+******************************************************************************/
+@media screen and (min-width: 768px) {
+    nav, main {
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    nav {
+        flex-direction: row;
+    }
+    nav .logo {
+        flex-direction: row;
+    }
+    nav ul {
+        background-color: transparent;
+        gap: 1rem;
+    }
+    nav li a {
+        background-color: #ebe3db;
+        padding: 0.3em 1em;
+    }
+    nav li a:hover {
+        color: #ebe3db;
+        background-color: #4c4343;
+    }
+    .slider img {
+        width: 100%;
+    }
+    .welcome {
+        flex-direction: row;
+        align-items: center;
+        font-size: 1.8rem;
+        padding: 0;
+    }
+    .welcome:last-child {
+        width: 100%;
+        display: flex;
+    }
+    .welcome article p {
+        margin: 0;
+    }
+    .welcome .location {
+        width: 100%;
+    }
+    .cards {
+        display: flex;
+        gap: 2rem;
+        
+    }
 }
