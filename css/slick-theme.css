@@ -36,7 +36,7 @@
 
     cursor: pointer;
 
-    color: transparent;
+    color: red;
     border: none;
     outline: none;
     background: transparent;
@@ -149,7 +149,7 @@
 }
 .slick-dots li button
 {
-    font-size: 0;
+    font-size: 1.5rem;
     line-height: 0;
 
     display: block;

@@ -25,45 +25,48 @@ header {
     background: linear-gradient(to bottom, rgba(208,197,186,1) 0%,rgba(235,227,219,0.25) 25%,rgba(255,255,255,0) 100%);
 }
 
-nav {
+.principal {
     display: flex;
     flex-direction: column;
     align-items: center;
     padding-top: 1em;
 }
-nav .logo, nav ul {
+.principal .logo, .principal ul {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+.logo {
+    padding-left: 1em;
 }
 .logo p {
     display: flex;
     align-items: center;
     gap: 1rem;
 }
-nav ul {
+.principal ul {
     list-style: none;
     padding: 0;
     line-height: 2.5;
     width: 100%;
     text-align: center;
 }
-nav ul li {
+.principal ul li {
     width: 100%;
     border-top: 1px solid #4c4343;
 }
-nav ul:last-child {
+.principal ul:last-child {
     border-bottom: 1px solid #4c4343;
 }
-nav ul li:active {
+.principal ul li:active{
     background-color: #4c4343;
     color: #ebe3db;
 }
-nav ul li a {
+.principal ul li a {
     text-decoration: none;
     color: #4c4343;
 }
-nav .logo img {
+.principal .logo img {
     width: 20%;
 }
 /*main*/
@@ -79,11 +82,17 @@ section h1 {
     font-size: 3rem;
 }
 .slider {
-    width: 100%;
-    text-align: center;
+    width: 90%;
+    height: 200px;
+    margin-left: auto;
+    margin-right: auto;
 }
 .slider img {
-    width: 90%;
+    width: 100%;
+    height: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    
 }
 .welcome {
     display: flex;
@@ -171,18 +180,18 @@ footer h4 {
 TABLETTE
 ******************************************************************************/
 @media screen and (min-width: 420px) {
-    nav ul {
+    .principal ul {
         flex-direction: row;
         border: none;
         background-color: #ebe3db;
     }
-    nav ul li {
+    .principal ul li {
         border: none;
     }
-    nav ul li:active a{
+    .principal ul li:active a{
         color: #ebe3db;
     }
-    nav ul:last-child {
+    .principal ul:last-child {
         border: none;
     }
     footer {
@@ -206,26 +215,27 @@ TABLETTE
 DESKTOP
 ******************************************************************************/
 @media screen and (min-width: 768px) {
-    nav, main {
+    .principal main {
         width: 90%;
         margin-left: auto;
         margin-right: auto;
     }
-    nav {
+    .principal {
+        flex-direction: row;
+        margin-bottom: 2rem;
+    }
+    .principal .logo {
         flex-direction: row;
     }
-    nav .logo {
-        flex-direction: row;
-    }
-    nav ul {
+    .principal ul {
         background-color: transparent;
         gap: 1rem;
     }
-    nav li a {
+    .principal li a {
         background-color: #ebe3db;
         padding: 0.3em 1em;
     }
-    nav li a:hover {
+    .principal li a:hover {
         color: #ebe3db;
         background-color: #4c4343;
     }
@@ -253,4 +263,17 @@ DESKTOP
         gap: 2rem;
         
     }
+}
+
+/*****************************************************************************menus********************************************************************************/
+
+.img-menu {
+    display: grid;
+}
+.row {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+}
+.row .1 {
+    grid-column: 1/3;
 }

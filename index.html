@@ -2,7 +2,7 @@
 <html lang="fr">
 <head>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
     <link rel="stylesheet" type="text/css" href="css/slick.css"/>
     <link rel="stylesheet" type="text/css" href="css/slick-theme.css"/>
     <link rel="stylesheet" href="css/style.css" type="text/css" />
@@ -12,15 +12,15 @@
 </head>
 <body>
     <header>
-        <nav>
+        <nav class="principal">
             <div class="logo">
                 <img src="images/logo.png" alt="Logo">
                 <p><i class="fa-solid fa-star"></i> Freshly Restaurant <i class="fa-solid fa-star"></i></p>
             </div>
             <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Menus</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="menus.html">Menus</a></li>
                 <li><a href="#">Contact</a></li>
             </ul>
         </nav>
@@ -122,12 +122,15 @@
     </div>
     
     <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+    
     <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-    <script type="text/javascript" src="js/slick.min.js">
+    
+    <script type="text/javascript" src="js/slick.min.js"></script>
+    
+    <script>
         $('.slider').slick({
-            rtl: true
+            dots: true
         });
-			
     </script>
 </body>
 </html>
